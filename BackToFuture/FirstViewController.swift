@@ -21,6 +21,12 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let year = Utilities().getCurrentYear()
+        
+        firstLabel.text = Utilities().getLetterAtIndex(text: year, location: 0)
+        secondLabel.text = Utilities().getLetterAtIndex(text: year, location: 1)
+        thirdLabel.text = Utilities().getLetterAtIndex(text: year, location: 2)
+        forthLabel.text = Utilities().getLetterAtIndex(text: year, location: 3)
         // Do any additional setup after loading the view.
     }
 
