@@ -20,4 +20,12 @@ class Utilities {
         return String(text[index])
     }
     
+    func getCurrentTime() -> String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .none
+        formatter.timeStyle = .medium
+        return formatter.string(from: date)
+    }
+    
 }
