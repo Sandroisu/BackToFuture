@@ -9,10 +9,25 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var firstLabel: UILabel!
+    
+    
+    @IBOutlet weak var secondLabel: UILabel!
+    
+    @IBOutlet weak var thirdLabel: UILabel!
+    
+    
+    @IBOutlet weak var forthLabel: UILabel!
+    
+    
+    @IBOutlet weak var goButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
     }
 
-
+    @IBAction func buttonCkicked(_ sender: Any) {
+    }
+    
 }
