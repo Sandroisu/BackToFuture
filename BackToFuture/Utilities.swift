@@ -28,4 +28,8 @@ class Utilities {
         return formatter.string(from: date)
     }
     
+    func getRundomYear() -> String {
+        return String(arc4random_uniform(8999) + 1000)
+    }
+    
 }
