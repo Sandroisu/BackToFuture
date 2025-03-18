@@ -24,7 +24,6 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
     }
 
     @IBAction func buttonCkicked(_ sender: Any) {
@@ -34,6 +33,19 @@ class SecondViewController: UIViewController {
         secondLabel.text = utils.getLetterAtIndex(text: rundomYear, location: 1)
         thirdLabel.text = utils.getLetterAtIndex(text: rundomYear, location: 2)
         forthLabel.text = utils.getLetterAtIndex(text: rundomYear, location: 3)
+        
+        animateLabel(duration: 0.5, delay: 0, object: firstLabel)
+        animateLabel(duration: 0.5, delay: 0.2, object: secondLabel)
+        animateLabel(duration: 0.5, delay: 0.4, object: thirdLabel)
+        animateLabel(duration: 0.5, delay: 0.6, object: forthLabel)
+    }
+    
+    func animateLabel(duration: Double, delay: Double, object: UIView){
+        UIView.animate(withDuration: duration, delay: delay, options: .curveEaseOut,  animations: {
+            object.center.x += self.view.bounds.width
+        }){(true) in
+            
+        }
     }
     
 }
